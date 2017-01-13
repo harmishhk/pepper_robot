@@ -1,0 +1,14 @@
+<launch>
+    <master auto="start"/>
+
+    <!-- setting up robot frames and model -->
+    <arg name="version" default="1.0" />
+    <param name="robot_description" command="cat $(find pepper_description)/urdf/pepper$(arg version)_generated_urdf/pepper.urdf" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <param name="use_gui" value="false" />
+        <param name="rate" value="160" />
+    </node>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
+        <param name="publish_frequency" value="40.0" />
+    </node>
+</launch>

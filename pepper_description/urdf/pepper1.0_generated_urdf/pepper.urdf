@@ -138,9 +138,9 @@
     </collision>
   </link>
   <joint name="base_footprint_joint" type="fixed">
-    <parent link="Tibia"/>
-    <child link="base_footprint"/>
-    <origin rpy="0 0 0" xyz="0 0 -0.334"/>
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0.82"/>
   </joint>
   <link name="base_footprint"/>
   <link name="base_link"/>
@@ -172,7 +172,7 @@
   <joint name="LShoulderPitch" type="revolute">
     <parent link="torso"/>
     <child link="LShoulder"/>
-    <origin rpy="0 0 0" xyz="-0.057 0.14974 0.08682"/>
+    <origin rpy="0 1.5 0" xyz="-0.057 0.14974 0.08682"/>
     <axis xyz="0 1.0 0"/>
     <limit effort="5.428" lower="-2.08567" upper="2.08567" velocity="7.33998"/>
   </joint>
@@ -198,7 +198,7 @@
   <joint name="LShoulderRoll" type="revolute">
     <parent link="LShoulder"/>
     <child link="LBicep"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 -0.79" xyz="0 0 0"/>
     <axis xyz="0 0 1.0"/>
     <limit effort="2.666" lower="0.00872665" upper="1.56207" velocity="9.22756"/>
   </joint>
@@ -250,7 +250,7 @@
   <joint name="LElbowRoll" type="revolute">
     <parent link="LElbow"/>
     <child link="LForeArm"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0.79" xyz="0 0 0"/>
     <axis xyz="0 0 1.0"/>
     <limit effort="2.666" lower="-1.56207" upper="-0.00872665" velocity="9.22756"/>
   </joint>
@@ -276,7 +276,7 @@
   <joint name="LWristYaw" type="revolute">
     <parent link="LForeArm"/>
     <child link="l_wrist"/>
-    <origin rpy="0 0 0" xyz="0.15 0 0"/>
+    <origin rpy="-1.6 0 0" xyz="0.15 0 0"/>
     <axis xyz="1.0 0 0"/>
     <limit effort="0.2014" lower="-1.82387" upper="1.82387" velocity="17.3835"/>
   </joint>
@@ -315,7 +315,7 @@
   <joint name="RShoulderPitch" type="revolute">
     <parent link="torso"/>
     <child link="RShoulder"/>
-    <origin rpy="0 0 0" xyz="-0.057 -0.14974 0.08682"/>
+    <origin rpy="0 1.5 0" xyz="-0.057 -0.14974 0.08682"/>
     <axis xyz="0 1.0 0"/>
     <limit effort="5.428" lower="-2.08567" upper="2.08567" velocity="7.33998"/>
   </joint>
@@ -341,7 +341,7 @@
   <joint name="RShoulderRoll" type="revolute">
     <parent link="RShoulder"/>
     <child link="RBicep"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 0.79" xyz="0 0 0"/>
     <axis xyz="0 0 1.0"/>
     <limit effort="2.666" lower="-1.56207" upper="-0.00872665" velocity="9.22756"/>
   </joint>
@@ -393,7 +393,7 @@
   <joint name="RElbowRoll" type="revolute">
     <parent link="RElbow"/>
     <child link="RForeArm"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <origin rpy="0 0 -0.79" xyz="0 0 0"/>
     <axis xyz="0 0 1.0"/>
     <limit effort="2.666" lower="0.00872665" upper="1.56207" velocity="9.22756"/>
   </joint>
@@ -419,7 +419,7 @@
   <joint name="RWristYaw" type="revolute">
     <parent link="RForeArm"/>
     <child link="r_wrist"/>
-    <origin rpy="0 0 0" xyz="0.15 0 0"/>
+    <origin rpy="1.6 0 0" xyz="0.15 0 0"/>
     <axis xyz="1.0 0 0"/>
     <limit effort="0.2014" lower="-1.82387" upper="1.82387" velocity="17.3835"/>
   </joint>

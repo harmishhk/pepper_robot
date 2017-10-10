@@ -11,4 +11,7 @@
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher">
         <param name="publish_frequency" value="40.0" />
     </node>
+
+    <!-- add inexisting laser link -->
+    <node pkg="tf" type="static_transform_publisher" name="laser_link_broadcaster" args="0 0 0.25 0 0 0 1 base_footprint base_laser_link 50" />
 </launch>
